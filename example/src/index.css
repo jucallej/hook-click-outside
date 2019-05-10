@@ -2,4 +2,18 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: green;
+}
+
+button {
+  width: 300px;
+}
+
+ul {
+  background-color: yellow;
+  width: 300px;
+}
+
+li {
+  list-style: none;
 }

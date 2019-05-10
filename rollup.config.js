@@ -8,7 +8,7 @@ import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
 
 import pkg from './package.json'
-
+// TODO: check and remove unneeded things
 export default {
   input: 'src/index.tsx',
   output: [

@@ -1,10 +1,10 @@
 {
-  "name": "click-outside-component",
+  "name": "click-outside",
   "version": "1.0.0",
   "description": "Library to detect clicks outside a component",
   "author": "jucallej",
   "license": "MIT",
-  "repository": "jucallej/click-outside-component",
+  "repository": "jucallej/click-outside",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

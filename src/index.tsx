@@ -1,23 +1,37 @@
 /**
- * @class ExampleComponent
+ * @class ClickOutside
  */
 
-import * as React from 'react'
+import * as React from 'react';
+import {ReactNode, useEffect, useRef} from 'react';
 
-import styles from './styles.css'
+// TODO: do I need the export here?
+export type Props = { clickedOutside: Function, children: ReactNode };
 
-export type Props = { text: string }
+const ClickOutside: React.FunctionComponent<Props> = ({clickedOutside, children}) => {
+  const node = useRef<HTMLDivElement>(null);
 
-export default class ExampleComponent extends React.Component<Props> {
-  render() {
-    const {
-      text
-    } = this.props
+  const click = (event: Event) => {
+    if (node.current && event.target instanceof Node && !node.current.contains(event.target)){
+      event.stopPropagation();
+      event.preventDefault();
+      clickedOutside();
+    }
+  };
 
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+  useEffect(() => {
+    document.addEventListener('click', click, true);
+
+    return () => {
+      document.removeEventListener('click', click, true);
+    };
+  });
+
+  return (
+    <div ref={node}>
+      {children}
+    </div>
+  )
+};
+
+export default ClickOutside;
