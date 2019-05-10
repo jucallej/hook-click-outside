@@ -1,0 +1,8 @@
+{
+  "short_name": "click-outside-component",
+  "name": "click-outside-component",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
