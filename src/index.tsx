@@ -4,11 +4,11 @@
 
 import * as React from 'react';
 import {ReactNode, useEffect, useRef} from 'react';
+import PropTypes from 'prop-types';
 
-// TODO: do I need the export here?
-export type Props = { clickedOutside: Function, children: ReactNode };
+export type Props = { clickedOutside: Function, children: ReactNode, className: string };
 
-const ClickOutside: React.FunctionComponent<Props> = ({clickedOutside, children}) => {
+const ClickOutside: React.FunctionComponent<Props> = ({clickedOutside, children, className}) => {
   const node = useRef<HTMLDivElement>(null);
 
   const click = (event: Event) => {
@@ -28,10 +28,16 @@ const ClickOutside: React.FunctionComponent<Props> = ({clickedOutside, children}
   });
 
   return (
-    <div ref={node}>
+    <div ref={node} className={className}>
       {children}
     </div>
   )
+};
+
+ClickOutside.propTypes = {
+  clickedOutside: PropTypes.func.isRequired,
+  children: PropTypes.element.isRequired,
+  className: PropTypes.string
 };
 
 export default ClickOutside;

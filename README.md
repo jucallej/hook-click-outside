@@ -12,6 +12,8 @@ npm install --save click-outside
 
 ## Usage
 // TODO: make a good example
+
+// TODO: are the types exported
 ```tsx
 import * as React from 'react'
 

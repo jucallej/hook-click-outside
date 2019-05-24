@@ -17,7 +17,7 @@ export default class App extends Component {
         <button onClick={this.toggleMenu}>Toggle menu</button>
           {
             this.state.isMenuOpen &&
-            <ClickOutside clickedOutside={this.toggleMenu} ignoreClick={!this.state.isMenuOpen}>
+            <ClickOutside clickedOutside={this.toggleMenu} className='container'>
               <ul>
                 <li>Menu item 1</li>
                 <li>Menu item 2</li>
