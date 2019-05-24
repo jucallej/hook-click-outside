@@ -1,20 +1,7 @@
-import * as React from 'react';
-import { FunctionComponent } from 'react';
-import {ReactNode, useEffect, useRef} from 'react';
+import {useEffect} from 'react';
 
-export type Props = { clickedOutside: Function, children: ReactNode, className?: string };
-
-const ClickOutside: FunctionComponent<Props> = ({clickedOutside, children, className}) => {
-  const node = useRef<HTMLDivElement>(null);
-
-  const click = (event: Event) => {
-    if (node.current && event.target instanceof Node && !node.current.contains(event.target)){
-      event.stopPropagation();
-      event.preventDefault();
-      clickedOutside();
-    }
-  };
-
+// @ts-ignore
+export const useClickOutside = (node, clickedOutside) => {
   useEffect(() => {
     document.addEventListener('click', click, true);
 
@@ -23,11 +10,11 @@ const ClickOutside: FunctionComponent<Props> = ({clickedOutside, children, class
     };
   });
 
-  return (
-    <div ref={node} className={className}>
-      {children}
-    </div>
-  )
+  const click = (event: Event) => {
+    if (node.current && event.target instanceof Node && !node.current.contains(event.target)){
+      event.stopPropagation();
+      event.preventDefault();
+      clickedOutside();
+    }
+  };
 };
-
-export default ClickOutside;

@@ -1,13 +1,13 @@
-# click-outside-component
+# Hook to register to clicks outside a node
 
 > Library to detect clicks outside a component
 
-[![NPM](https://img.shields.io/npm/v/react-click-outside.svg)](https://www.npmjs.com/package/react-click-outside) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/hook-click-outside.svg)](https://www.npmjs.com/package/hook-click-outside) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save react-click-outside
+npm install --save hook-click-outside
 ```
 
 This is currently a work in progress. Main things not done yet:
