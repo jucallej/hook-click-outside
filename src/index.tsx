@@ -1,14 +1,10 @@
-/**
- * @class ClickOutside
- */
-
 import * as React from 'react';
+import { FunctionComponent } from 'react';
 import {ReactNode, useEffect, useRef} from 'react';
-import PropTypes from 'prop-types';
 
-export type Props = { clickedOutside: Function, children: ReactNode, className: string };
+export type Props = { clickedOutside: Function, children: ReactNode, className?: string };
 
-const ClickOutside: React.FunctionComponent<Props> = ({clickedOutside, children, className}) => {
+const ClickOutside: FunctionComponent<Props> = ({clickedOutside, children, className}) => {
   const node = useRef<HTMLDivElement>(null);
 
   const click = (event: Event) => {
@@ -32,12 +28,6 @@ const ClickOutside: React.FunctionComponent<Props> = ({clickedOutside, children,
       {children}
     </div>
   )
-};
-
-ClickOutside.propTypes = {
-  clickedOutside: PropTypes.func.isRequired,
-  children: PropTypes.element.isRequired,
-  className: PropTypes.string
 };
 
 export default ClickOutside;
