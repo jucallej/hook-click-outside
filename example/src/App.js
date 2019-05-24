@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ClickOutside from 'click-outside';
 
-// TODO: convert to typescript
 export default class App extends Component {
   state = {
     isMenuOpen: false

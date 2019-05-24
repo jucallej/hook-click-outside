@@ -2,37 +2,20 @@
 
 > Library to detect clicks outside a component
 
-[![NPM](https://img.shields.io/npm/v/click-outside.svg)](https://www.npmjs.com/package/click-outside) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-click-outside.svg)](https://www.npmjs.com/package/react-click-outside) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save click-outside
+npm install --save react-click-outside
 ```
 
-## Usage
-// TODO: make a good example
+This is currently a work in progress. Main things not done yet:
 
-// TODO: are the types exported
-```tsx
-import * as React from 'react'
-
-import MyComponent from 'click-outside'
-
-class Example extends React.Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
-```
+* Add tests for the hook and the callback
+* Update libraries
+* Move the example to typescript
 
 ## License
 
 MIT © [jucallej](https://github.com/jucallej)
-
-
-
-// https://reactjs.org/warnings/invalid-hook-call-warning.html#duplicate-react
-// https://github.com/transitive-bullshit/create-react-library/issues/99
