@@ -1,31 +1,23 @@
-import React, { Component } from 'react';
 import ClickOutside from 'click-outside';
+import React, { useState } from 'react';
 
-export default class App extends Component {
-  state = {
-    isMenuOpen: false
-  };
+export default () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
-  toggleMenu = () => {
-    this.setState({isMenuOpen: !this.state.isMenuOpen});
-  };
-
-  render () {
-    return (
-      <div>
-        <button onClick={this.toggleMenu}>Toggle menu</button>
-          {
-            this.state.isMenuOpen &&
-            <ClickOutside clickedOutside={this.toggleMenu} className='container'>
-              <ul>
-                <li>Menu item 1</li>
-                <li>Menu item 2</li>
-                <li>Menu item 3</li>
-                <li>Menu item 4</li>
-              </ul>
-            </ClickOutside>
-          }
-      </div>
-    )
-  }
-}
+  return (
+    <div>
+      <button onClick={toggleMenu}>Toggle menu</button>
+      {
+        isMenuOpen &&
+        <ClickOutside clickedOutside={toggleMenu} className='container'>
+          <ul>
+            <li>Menu item 1</li>
+            <li>Menu item 2</li>
+            <li>Menu item 3</li>
+            <li>Menu item 4</li>
+          </ul>
+        </ClickOutside>
+      }
+    </div>)
+};
