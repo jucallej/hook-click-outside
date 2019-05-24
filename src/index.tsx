@@ -1,7 +1,6 @@
-import {useEffect} from 'react';
+import {MutableRefObject, useEffect} from 'react';
 
-// @ts-ignore
-export const useClickOutside = (node, clickedOutside) => {
+export const useClickOutside = (node: MutableRefObject<HTMLElement>, clickedOutside: Function) => {
   useEffect(() => {
     document.addEventListener('click', click, true);
 
