@@ -1,5 +1,10 @@
-# TODO: what is this?
 language: node_js
 node_js:
   - 9
   - 8
+deploy:
+  provider: npm
+  email: ${email}
+  api_key: ${npm_api_key}
+  on:
+    branch: master

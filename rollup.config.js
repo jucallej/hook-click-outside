@@ -10,7 +10,7 @@ import svgr from '@svgr/rollup'
 import pkg from './package.json'
 // TODO: check and remove unneeded things
 export default {
-  input: 'src/index.tsx',
+  input: 'src/index.ts',
   output: [
     {
       file: pkg.main,

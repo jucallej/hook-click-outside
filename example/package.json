@@ -1,6 +1,6 @@
 {
-  "name": "click-outside-component-example",
-  "homepage": "https://jucallej.github.io/click-outside-component",
+  "name": "hook-click-outside-example",
+  "homepage": "https://jucallej.github.io/hook-click-outside",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -9,7 +9,7 @@
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
     "react-scripts": "1.1.5",
-    "click-outside": "file:.."
+    "hook-click-outside": "file:.."
   },
   "scripts": {
     "start": "react-scripts start",

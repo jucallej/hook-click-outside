@@ -11,7 +11,7 @@ export const useClickOutside = (node: MutableRefObject<HTMLElement>, clickedOuts
 
   const click = (event: Event) => {
     if (node.current && event.target instanceof Node && !node.current.contains(event.target)){
-      event.stopPropagation();
+      event.stopPropagation()
       event.preventDefault();
       clickedOutside();
     }
