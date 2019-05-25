@@ -1,6 +1,6 @@
 {
   "name": "hook-click-outside",
-  "version": "0.0.9",
+  "version": "2.0.0",
   "description": "React hook to detect clicks outside a node",
   "author": "jucallej",
   "license": "MIT",
