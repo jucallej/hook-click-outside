@@ -1,12 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { useClickOutside } from 'hook-click-outside'
 
 export default () => {
   const [isMenuOpen, setMenuOpen] = useState(false)
   const toggleMenu = () => setMenuOpen(!isMenuOpen)
-  const node = useRef(null)
 
-  useClickOutside(node, toggleMenu)
+  const node = useClickOutside(toggleMenu)
 
   return (
     <div>

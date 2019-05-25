@@ -1,5 +1,6 @@
 import {useClickOutside} from '../index';
 import { renderHook } from 'react-hooks-testing-library';
+import { node } from 'prop-types';
 
 describe('useClickOutside', () => {
   const nodeOutside = document.createElement("p");
@@ -12,13 +13,19 @@ describe('useClickOutside', () => {
   event.stopPropagation = jest.fn();
   event.preventDefault = jest.fn();
   const callback = jest.fn();
+  let node: React.RefObject<HTMLElement>;
 
   beforeAll(() => {
     nodeToWatch.appendChild(nodeInside); 
     document.body.appendChild(nodeOutside);
     document.body.appendChild(nodeToWatch);
 
-    renderHook(() => useClickOutside({current : nodeToWatch}, callback));
+    renderHook(() => {
+      node = useClickOutside(callback);
+      // @ts-ignore
+      // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/31065
+      node.current = nodeToWatch;
+    });
   });
 
   beforeEach(() => {

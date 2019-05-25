@@ -1,6 +1,8 @@
-import {MutableRefObject, useEffect} from 'react';
+import {MutableRefObject, useEffect, useRef} from 'react';
 
-export const useClickOutside = (node: MutableRefObject<HTMLElement>, clickedOutside: Function) => {
+export const useClickOutside = (clickedOutside: Function): React.RefObject<HTMLElement> => {
+  const node = useRef<HTMLElement>(null);
+
   useEffect(() => {
     document.addEventListener('click', click, true);
 
@@ -16,4 +18,6 @@ export const useClickOutside = (node: MutableRefObject<HTMLElement>, clickedOuts
       clickedOutside();
     }
   };
+
+  return node;
 };
