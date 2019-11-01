@@ -16,8 +16,6 @@ Main things not done yet:
 
 * Move the example to typescript (with tests)
 * Add better doc/changelog
-* Add UI tests with puppeteer
-* Make sure the UI tests with puppeteer run the CI
 
 ## License
 
