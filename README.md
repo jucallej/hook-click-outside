@@ -16,7 +16,3 @@ Main things not done yet:
 
 * Move the example to typescript (with tests)
 * Add better doc/changelog
-
-## License
-
-MIT © [jucallej](https://github.com/jucallej)
