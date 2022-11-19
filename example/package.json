@@ -7,7 +7,7 @@
   "dependencies": {
     "react": "file:../node_modules/react",
     "react-dom": "file:../node_modules/react-dom",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "hook-click-outside": "file:.."
   },
   "scripts": {
